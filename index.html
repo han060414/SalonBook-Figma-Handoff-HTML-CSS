@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SalonBook - Khám phá salon và các dịch vụ làm đẹp.">
+  <title>SalonBook | Trang chủ – Minh chứng mục 4.3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="trang-chu">
+  <!-- Figma: Header / Main Navigation -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#trang-chu" aria-label="SalonBook - Trang chủ">
+        <span class="brand__mark" aria-hidden="true">≡</span><span>Salon<strong>Book</strong></span>
+      </a>
+      <nav class="nav" aria-label="Điều hướng chính">
+        <a class="nav__link is-current" href="#trang-chu" aria-current="page">Trang chủ</a>
+        <a class="nav__link" href="#salon">Khám phá salon</a>
+        <a class="nav__link" href="#dich-vu">Dịch vụ</a>
+        <a class="nav__link" href="#gioi-thieu">Giới thiệu</a>
+      </nav>
+      <a class="btn btn--outline account" href="#gioi-thieu"><span aria-hidden="true">♙</span> Tài khoản</a>
+      <!-- Mobile navigation works without JavaScript -->
+      <details class="mobile-nav">
+        <summary aria-label="Mở menu điều hướng">☰ <span>Menu</span></summary>
+        <nav class="mobile-nav__panel" aria-label="Điều hướng trên điện thoại">
+          <a href="#trang-chu">Trang chủ</a>
+          <a href="#salon">Khám phá salon</a>
+          <a href="#dich-vu">Dịch vụ</a>
+          <a href="#gioi-thieu">Giới thiệu</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- Figma: Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__content">
+        <span class="hero__badge">KHÁM PHÁ SALON ĐẸP</span>
+        <h1 id="hero-heading">Đẹp theo cách bạn chọn,<br>đặt lịch thật dễ dàng.</h1>
+        <p class="hero__desc">Tìm salon phù hợp, chọn dịch vụ yêu thích và sẵn sàng cho diện mạo mới của bạn.</p>
+        <!-- Search field is a static HTML/CSS demonstration, not a functional search engine -->
+        <form class="search-bar" role="search" action="#salon" method="get">
+          <label class="sr-only" for="salon-keyword">Tên salon, dịch vụ hoặc khu vực</label>
+          <svg class="search-bar__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="salon-keyword" name="q" type="search" placeholder="Tên salon, dịch vụ hoặc khu vực...">
+          <button class="btn btn--primary" type="submit">Tìm kiếm</button>
+        </form>
+      </div>
+      <div class="hero__illustration" aria-hidden="true">
+        <div class="hero__halo"></div>
+        <div class="hero__photo-frame">
+          <img src="assets/hero-frame.png" width="327" height="387" alt="Minh hoạ chân dung trong khung ảnh phong cách SalonBook">
+        </div>
+        <span class="hero__dot hero__dot--top"></span>
+        <span class="hero__dot hero__dot--bottom"></span>
+      </div>
+    </section>
+
+    <!-- Figma: Service List / four Service Cards -->
+    <section id="dich-vu" class="section" aria-labelledby="service-title">
+      <div class="section__heading">
+        <p class="overline">DỊCH VỤ NỔI BẬT</p>
+        <h2 id="service-title">Chọn dịch vụ bạn yêu thích</h2>
+        <p class="section__subtitle">Bắt đầu từ dịch vụ phù hợp với nhu cầu của bạn.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card"><span class="service-card__icon service-card__icon--mint" aria-hidden="true">✂</span><h3>Cắt &amp; tạo kiểu</h3><p>Tạo phong cách mới</p></article>
+        <article class="service-card"><span class="service-card__icon service-card__icon--yellow" aria-hidden="true">✦</span><h3>Nhuộm tóc</h3><p>Làm mới diện mạo</p></article>
+        <article class="service-card"><span class="service-card__icon service-card__icon--blue" aria-hidden="true">◈</span><h3>Gội &amp; thư giãn</h3><p>Chăm sóc nhẹ nhàng</p></article>
+        <article class="service-card"><span class="service-card__icon service-card__icon--pink" aria-hidden="true">❋</span><h3>Phục hồi tóc</h3><p>Dưỡng tóc chắc khỏe</p></article>
+      </div>
+    </section>
+
+    <!-- Figma: Salon List / three Salon Cards -->
+    <section id="salon" class="section" aria-labelledby="salon-title">
+      <div class="section__heading section__heading--row">
+        <div><p class="overline">ĐỊA ĐIỂM DÀNH CHO BẠN</p><h2 id="salon-title">Salon được quan tâm</h2><p class="section__subtitle">Khám phá những không gian làm đẹp nổi bật.</p></div>
+        <a class="link-all" href="#salon-grid">Xem tất cả <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="salon-grid" id="salon-grid">
+        <article id="the-hair-space" class="salon-card">
+          <img src="assets/salon-hair-space.jpg" class="salon-card__image" width="1029" height="573" alt="Ảnh mặt tiền salon The Hair Space">
+          <div class="salon-card__body"><h3>The Hair Space</h3><p class="salon-card__sub">Cắt &amp; tạo kiểu · Nhuộm tóc</p>
+          <div class="salon-card__footer"><p class="salon-card__price"><span>Từ </span><strong>150.000đ</strong></p><a class="btn btn--soft" href="#the-hair-space">Xem chi tiết</a></div></div>
+        </article>
+        <article id="sac-viet" class="salon-card">
+          <img src="assets/salon-sac-viet.jpg" class="salon-card__image" width="1029" height="573" alt="Ảnh không gian bên trong Sắc Việt Hair Salon">
+          <div class="salon-card__body"><h3>Sắc Việt Hair Salon</h3><p class="salon-card__sub">Cắt tóc · Chăm sóc tóc</p>
+          <div class="salon-card__footer"><p class="salon-card__price"><strong>Giá theo dịch vụ</strong></p><a class="btn btn--soft" href="#sac-viet">Xem chi tiết</a></div></div>
+        </article>
+        <article id="khanh-salon" class="salon-card">
+          <img src="assets/salon-khanh.jpg" class="salon-card__image" width="1029" height="573" alt="Ảnh bảng hiệu Khánh Salon">
+          <div class="salon-card__body"><h3>Khánh Salon</h3><p class="salon-card__sub">Tạo kiểu · Phục hồi tóc</p>
+          <div class="salon-card__footer"><p class="salon-card__price"><strong>Giá theo dịch vụ</strong></p><a class="btn btn--soft" href="#khanh-salon">Xem chi tiết</a></div></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Figma: Footer -->
+  <footer class="footer" id="gioi-thieu"><div class="container footer__inner">
+    <div><a class="footer__brand" href="#trang-chu">SalonBook</a><p>Đặt lịch làm đẹp dễ dàng hơn.</p></div>
+    <div class="footer__right"><nav class="footer__links" aria-label="Điều hướng cuối trang"><a href="#trang-chu">Trang chủ</a><a href="#salon">Khám phá salon</a><a href="#gioi-thieu">Liên hệ</a></nav><p class="footer__copyright">© SalonBook – Minh chứng HTML5/CSS3 mục 4.3</p></div>
+  </div></footer>
+</body>
+</html>
